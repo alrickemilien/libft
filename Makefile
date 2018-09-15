@@ -12,6 +12,7 @@
 
 include printf.mk
 include libft.mk
+include libbuffer.mk
 
 CCFLAGS= -Wall -Wextra -Werror
 
