@@ -6,7 +6,7 @@
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 18:16:49 by aemilien          #+#    #+#             */
-/*   Updated: 2017/05/16 09:48:14 by aemilien         ###   ########.fr       */
+/*   Updated: 2018/10/06 13:50:45 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,12 @@ char			*ft_strupcase(char *src);
 char			*ft_strsplice(char *current, char *to_add, int index);
 char						*ft_itoa_base(unsigned long long value, int base);
 void	ft_lstreverse(t_list **lst);
+
+
+void		*preppend_n_space_to_string(char **str, int n);
+int			string_end_with(const char *src, const char *end);
+void		*append_n_space_to_string(char **str, int n);
+int			ft_strcmp_alpha(char *s1, char *s2);
+char		*create_string_from_many(const char **many_strings, int size);
 
 #endif

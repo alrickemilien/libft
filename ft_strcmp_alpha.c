@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstreverse.c                                    :+:      :+:    :+:   */
+/*   ft_strcmp_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/06 13:54:45 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/06 13:54:46 by aemilien         ###   ########.fr       */
+/*   Created: 2018/10/06 13:54:11 by aemilien          #+#    #+#             */
+/*   Updated: 2018/10/06 13:54:32 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstreverse(t_list **lst)
-{
-	t_list	*before;
-	t_list	*current;
+/*
+** Sort by alphabetique and not by ASCII value
+*/
 
-	if (!*lst || !(*lst)->next)
-		return ;
-	current = *lst;
-	before = *lst;
-	*lst = (*lst)->next;
-	current->next = NULL;
-	while ((*lst)->next)
+int					ft_strcmp_alpha(char *s1, char *s2)
+{
+	int				i;
+	int				n;
+
+	n = ft_strlen(s1) + 1;
+	if (!n)
+		return (0);
+	i = 0;
+	while (i < n)
 	{
-		current = *lst;
-		*lst = (*lst)->next;
-		current->next = before;
-		before = current;
+		if (ft_tolower(s1[i]) != ft_tolower(s2[i]))
+			return (ft_tolower(s1[i]) - ft_tolower(s2[i]));
+		i++;
 	}
-	(*lst)->next = before;
+	return (0);
 }

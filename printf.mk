@@ -22,12 +22,12 @@ PRINTF_SRC= printf/ft_printf.c \
 
 PRINTF_INCLUDE=printf
 
-ifndef INCLUDE
+ifndef SRC
 	SRC				:=
 endif
 
 ifndef INCLUDE
-	SRC				:=
+	INCLUDE				:=
 endif
 
 SRC		+= $(PRINTF_SRC)

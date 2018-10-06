@@ -7,12 +7,12 @@ LIBBUFFER_SRC += libbuffer/absorb_buffer.c \
 
 LIBBUFFER_INCLUDE=libbuffer
 
-ifndef INCLUDE
+ifndef SRC
 	SRC				:=
 endif
 
 ifndef INCLUDE
-	SRC				:=
+	INCLUDE				:=
 endif
 
 SRC		+= $(LIBBUFFER_SRC)

@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstreverse.c                                    :+:      :+:    :+:   */
+/*   append_n_space_to_string.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/06 13:54:45 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/06 13:54:46 by aemilien         ###   ########.fr       */
+/*   Created: 2018/10/06 13:55:45 by aemilien          #+#    #+#             */
+/*   Updated: 2018/10/06 13:55:58 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstreverse(t_list **lst)
+void		*append_n_space_to_string(char **str, int n)
 {
-	t_list	*before;
-	t_list	*current;
+	char	*tmp;
+	int		i;
 
-	if (!*lst || !(*lst)->next)
-		return ;
-	current = *lst;
-	before = *lst;
-	*lst = (*lst)->next;
-	current->next = NULL;
-	while ((*lst)->next)
+	if (!(tmp = ft_strnew(n)))
+		return (NULL);
+	i = 0;
+	while (i < n)
 	{
-		current = *lst;
-		*lst = (*lst)->next;
-		current->next = before;
-		before = current;
+		tmp[i] = ' ';
+		i++;
 	}
-	(*lst)->next = before;
+	recycle(str, ft_strjoin(*str, tmp));
+	free(tmp);
+	return ((void*)1);
 }
