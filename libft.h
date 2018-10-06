@@ -6,7 +6,7 @@
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 18:16:49 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/06 13:50:45 by aemilien         ###   ########.fr       */
+/*   Updated: 2018/10/06 17:30:36 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,8 @@ int			string_end_with(const char *src, const char *end);
 void		*append_n_space_to_string(char **str, int n);
 int			ft_strcmp_alpha(char *s1, char *s2);
 char		*create_string_from_many(const char **many_strings, int size);
+
+t_list	*quick_sort_list(t_list *first, t_list *last,
+						int (*sort)(void*, void*));
 
 #endif

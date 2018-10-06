@@ -11,7 +11,8 @@ LIBFT_SRC += ft_isdigit.c ft_memcpy.c ft_putendl_fd.c ft_strclr.c ft_striteri.c 
 	 get_next_line.c ft_ltoa.c ft_dtoa.c ft_power.c ft_strrepeat.c recycle.c\
 	 ft_char_to_str.c ft_strupcase.c ft_strsplice.c ft_lstreverse.c ft_itoa_base.c\
 	 create_string_from_many.c ft_strcmp_alpha.c append_n_space_to_string.c \
-	 ft_strcmp_alpha.c ft_strcmp_alpha.c preppend_n_space_to_string.c string_end_with.c
+	 ft_strcmp_alpha.c ft_strcmp_alpha.c preppend_n_space_to_string.c string_end_with.c \
+	 quick_sort_list.c
 
 LIBFT_INCLUDE=.
 
