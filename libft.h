@@ -103,7 +103,7 @@ void		*append_n_space_to_string(char **str, int n);
 int			ft_strcmp_alpha(char *s1, char *s2);
 char		*create_string_from_many(const char **many_strings, int size);
 
-t_list	*quick_sort_list(t_list *first, t_list *last,
-						int (*sort)(void*, void*));
+t_list	*quick_sort_list(t_list *list,
+													int (*sort)(void*, void*));
 
 #endif

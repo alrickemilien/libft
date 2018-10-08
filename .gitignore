@@ -2,3 +2,5 @@
 *.swp
 *.DS_store
 *.a
+test.c
+a.out

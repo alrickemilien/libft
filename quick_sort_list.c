@@ -38,13 +38,14 @@ static void		swap_list_nodes(t_list *prev, t_list **cursor, t_list **tail)
 
 /*
 ** Partitioning the list taking the last element as the pivot
+** new[0] --> first
+** new[1] --> last
 */
 
 static t_list	*partition(
 		t_list *first,
 		t_list *last,
-		t_list **new_first,
-		t_list **new_last,
+		t_list **new[2],
 		int (*sort)(void*, void*))
 {
 	t_list *pivot;
@@ -60,24 +61,24 @@ static t_list	*partition(
 	{
 		if (sort(cursor->content, pivot->content) < 0)
 		{
-			if ((*new_first) == NULL)
-				(*new_first) = cursor;
+			if ((*new[0]) == NULL)
+				(*new[0]) = cursor;
 			prev = cursor;
 			cursor = cursor->next;
 		}
 		else
 			swap_list_nodes(prev, &cursor, &tail);
 	}
-	if ((*new_first) == NULL)
-		(*new_first) = pivot;
-	(*new_last) = tail;
+	if ((*new[0]) == NULL)
+		(*new[0]) = pivot;
+	(*new[1]) = tail;
 	return (pivot);
 }
 
-t_list	*quick_sort_list(
-		t_list *first,
-		t_list *last,
-		int (*sort)(void*, void*))
+static t_list	*quick_sort(
+	t_list *first,
+	t_list *last,
+	int (*sort)(void*, void*))
 {
 	t_list *tmp;
 	t_list *new_first;
@@ -87,18 +88,25 @@ t_list	*quick_sort_list(
 	new_first = NULL;
 	new_last = NULL;
 	if (!first || first == last)
-		return (first);
-	pivot = partition(first, last, &new_first, &new_last, sort);
+	return (first);
+	pivot = partition(first, last, (t_list **[2]){ &new_first, &new_last }, sort);
 	if (new_first != pivot)
 	{
 		tmp = new_first;
 		while (tmp->next != pivot)
-			tmp = tmp->next;
+		tmp = tmp->next;
 		tmp->next = NULL;
-		new_first = quick_sort_list(new_first, tmp, sort);
+		new_first = quick_sort(new_first, tmp, sort);
 		tmp = get_last_element(new_first);
 		tmp->next = pivot;
 	}
-	pivot->next = quick_sort_list(pivot->next, new_last, sort);
+	pivot->next = quick_sort(pivot->next, new_last, sort);
 	return (new_first);
+}
+
+t_list				*quick_sort_list(
+	t_list *list,
+	int (*sort)(void*, void*))
+{
+	return quick_sort(list, get_last_element(list), sort);
 }
