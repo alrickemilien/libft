@@ -6,7 +6,7 @@
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/06 17:25:59 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/06 17:32:47 by aemilien         ###   ########.fr       */
+/*   Updated: 2018/10/08 19:49:34 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,14 @@ static t_list	*quick_sort(
 	new_first = NULL;
 	new_last = NULL;
 	if (!first || first == last)
-	return (first);
-	pivot = partition(first, last, (t_list **[2]){ &new_first, &new_last }, sort);
+		return (first);
+	pivot = partition(first, last,
+			(t_list **[2]){&new_first, &new_last}, sort);
 	if (new_first != pivot)
 	{
 		tmp = new_first;
 		while (tmp->next != pivot)
-		tmp = tmp->next;
+			tmp = tmp->next;
 		tmp->next = NULL;
 		new_first = quick_sort(new_first, tmp, sort);
 		tmp = get_last_element(new_first);
@@ -104,9 +105,9 @@ static t_list	*quick_sort(
 	return (new_first);
 }
 
-t_list				*quick_sort_list(
+t_list			*quick_sort_list(
 	t_list *list,
 	int (*sort)(void*, void*))
 {
-	return quick_sort(list, get_last_element(list), sort);
+	return (quick_sort(list, get_last_element(list), sort));
 }
