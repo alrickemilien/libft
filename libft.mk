@@ -1,28 +1,28 @@
-LIBFT_SRC += ft_isdigit.c ft_memcpy.c ft_putendl_fd.c ft_strclr.c ft_striteri.c ft_strncmp.c\
-	 ft_strstr.c ft_isprint.c ft_memdel.c ft_putnbr.c ft_strcmp.c ft_strjoin.c \
-	 ft_strncpy.c ft_strsub.c ft_atoi.c ft_itoa.c ft_memmove.c ft_putnbr_fd.c \
-	 ft_strcpy.c ft_strlcat.c ft_strnequ.c ft_strtrim.c ft_bzero.c ft_memalloc.c \
-	 ft_memset.c ft_putstr.c ft_strdel.c ft_strlen.c ft_strnew.c ft_tolower.c \
-	 ft_isalnum.c ft_memccpy.c ft_putchar.c ft_putstr_fd.c ft_strdup.c ft_strmap.c \
-	 ft_strnstr.c ft_toupper.c ft_isalpha.c ft_memchr.c ft_putchar_fd.c ft_strcat.c \
-	 ft_strequ.c ft_strmapi.c ft_strrchr.c ft_isascii.c ft_memcmp.c ft_putendl.c \
-	 ft_strchr.c ft_striter.c ft_strncat.c ft_strsplit.c ft_lstadd.c ft_lstdel.c \
-	 ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_lstlen.c \
-	 get_next_line.c ft_ltoa.c ft_dtoa.c ft_power.c ft_strrepeat.c recycle.c\
-	 ft_char_to_str.c ft_strupcase.c ft_strsplice.c ft_lstreverse.c ft_itoa_base.c\
-	 create_string_from_many.c ft_strcmp_alpha.c append_n_space_to_string.c \
-	 ft_strcmp_alpha.c ft_strcmp_alpha.c preppend_n_space_to_string.c string_end_with.c \
-	 quick_sort_list.c
+LIBFT_SRC += libft/ft_isdigit.c libft/ft_memcpy.c libft/ft_putendl_fd.c libft/ft_strclr.c libft/ft_striteri.c libft/ft_strncmp.c\
+			 libft/ft_strstr.c libft/ft_isprint.c libft/ft_memdel.c libft/ft_putnbr.c libft/ft_strcmp.c libft/ft_strjoin.c libft/\
+			 libft/ft_strncpy.c libft/ft_strsub.c libft/ft_atoi.c libft/ft_itoa.c libft/ft_memmove.c libft/ft_putnbr_fd.c libft/\
+			 libft/ft_strcpy.c libft/ft_strlcat.c libft/ft_strnequ.c libft/ft_strtrim.c libft/ft_bzero.c libft/ft_memalloc.c libft/\
+			 libft/ft_memset.c libft/ft_putstr.c libft/ft_strdel.c libft/ft_strlen.c libft/ft_strnew.c libft/ft_tolower.c libft/\
+			 libft/ft_isalnum.c libft/ft_memccpy.c libft/ft_putchar.c libft/ft_putstr_fd.c libft/ft_strdup.c libft/ft_strmap.c libft/\
+			 libft/ft_strnstr.c libft/ft_toupper.c libft/ft_isalpha.c libft/ft_memchr.c libft/ft_putchar_fd.c libft/ft_strcat.c libft/\
+			 libft/ft_strequ.c libft/ft_strmapi.c libft/ft_strrchr.c libft/ft_isascii.c libft/ft_memcmp.c libft/ft_putendl.c libft/\
+			 libft/ft_strchr.c libft/ft_striter.c libft/ft_strncat.c libft/ft_strsplit.c libft/ft_lstadd.c libft/ft_lstdel.c libft/\
+			 libft/ft_lstdelone.c libft/ft_lstiter.c libft/ft_lstmap.c libft/ft_lstnew.c libft/ft_lstlen.c libft/\
+			 libft/get_next_line.c libft/ft_ltoa.c libft/ft_dtoa.c libft/ft_power.c libft/ft_strrepeat.c libft/recycle.c\
+			 libft/ft_char_to_str.c libft/ft_strupcase.c libft/ft_strsplice.c libft/ft_lstreverse.c libft/ft_itoa_base.c\
+			 libft/create_string_from_many.c libft/ft_strcmp_alpha.c libft/append_n_space_to_string.c libft/\
+			 libft/ft_strcmp_alpha.c libft/ft_strcmp_alpha.c libft/preppend_n_space_to_string.c libft/string_end_with.c libft/\
+			 libft/quick_sort_list.c
 
-LIBFT_INCLUDE=.
+LIBFT_INCLUDE=libft
 
 ifndef SRC
 	SRC				:=
 endif
 
 ifndef INCLUDE
-	INCLUDE				:=
+	INCLUDE			:=
 endif
 
-SRC		+= $(LIBFT_SRC)
+SRC			+= $(LIBFT_SRC)
 INCLUDE		+= -I $(LIBFT_INCLUDE)

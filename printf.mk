@@ -21,14 +21,16 @@ PRINTF_SRC= printf/ft_printf.c \
 	printf/read_conversion_specifier.c\
 
 PRINTF_INCLUDE=printf
+LIBFT_INCLUDE=libft
 
 ifndef SRC
 	SRC				:=
 endif
 
 ifndef INCLUDE
-	INCLUDE				:=
+	INCLUDE			:=
 endif
 
-SRC		+= $(PRINTF_SRC)
+SRC			+= $(PRINTF_SRC)
 INCLUDE		+= -I $(PRINTF_INCLUDE)
+INCLUDE		+= -I $(LIBFT_INCLUDE)
