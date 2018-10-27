@@ -6,7 +6,7 @@
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 18:16:49 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/20 13:50:26 by aemilien         ###   ########.fr       */
+/*   Updated: 2018/10/27 11:37:16 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "get_next_line.h"
+# include "./get_next_line.h"
 
 typedef struct	s_list
 {
