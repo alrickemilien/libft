@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_INT_H
+# define LIBFT_INT_H
 
 # include <string.h>
 # include <unistd.h>
