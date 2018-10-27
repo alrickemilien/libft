@@ -6,12 +6,12 @@
 #    By: aemilien <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/16 11:45:00 by aemilien          #+#    #+#              #
-#    Updated: 2018/10/20 14:19:58 by aemilien         ###   ########.fr        #
+#    Updated: 2018/10/27 12:50:15 by aemilien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-include printf.mk
 include libft.mk
+include printf.mk
 include libbuffer.mk
 
 CCFLAGS= -Wall -Wextra -Werror

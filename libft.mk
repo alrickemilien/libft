@@ -1,4 +1,4 @@
-libft_SRC += libft/ft_isdigit.c libft/ft_memcpy.c libft/ft_putendl_fd.c libft/ft_strclr.c libft/ft_striteri.c libft/ft_strncmp.c\
+LIBFT_SRC += libft/ft_isdigit.c libft/ft_memcpy.c libft/ft_putendl_fd.c libft/ft_strclr.c libft/ft_striteri.c libft/ft_strncmp.c\
 			 libft/ft_strstr.c libft/ft_isprint.c libft/ft_memdel.c libft/ft_putnbr.c libft/ft_strcmp.c libft/ft_strjoin.c \
 			 libft/ft_strncpy.c libft/ft_strsub.c libft/ft_atoi.c libft/ft_itoa.c libft/ft_memmove.c libft/ft_putnbr_fd.c \
 			 libft/ft_strcpy.c libft/ft_strlcat.c libft/ft_strnequ.c libft/ft_strtrim.c libft/ft_bzero.c libft/ft_memalloc.c \
@@ -14,7 +14,7 @@ libft_SRC += libft/ft_isdigit.c libft/ft_memcpy.c libft/ft_putendl_fd.c libft/ft
 			 libft/ft_strcmp_alpha.c libft/ft_strcmp_alpha.c libft/preppend_n_space_to_string.c libft/string_end_with.c \
 			 libft/quick_sort_list.c
 
-libft_INCLUDE=libft
+LIBFT_INCLUDE=libft
 
 ifndef SRC
 	SRC				:=
@@ -24,5 +24,5 @@ ifndef INCLUDE
 	INCLUDE			:=
 endif
 
-SRC			+= $(libft_SRC)
-INCLUDE		+= -I $(libft_INCLUDE)
+SRC			+= $(LIBFT_SRC)
+INCLUDE		+= -I $(LIBFT_INCLUDE) -I .
