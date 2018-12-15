@@ -12,7 +12,7 @@ LIBFT_SRC += libft/ft_isdigit.c libft/ft_memcpy.c libft/ft_putendl_fd.c libft/ft
 			 libft/ft_char_to_str.c libft/ft_strupcase.c libft/ft_strsplice.c libft/ft_lstreverse.c libft/ft_itoa_base.c\
 			 libft/create_string_from_many.c libft/ft_strcmp_alpha.c libft/append_n_space_to_string.c \
 			 libft/ft_strcmp_alpha.c libft/ft_strcmp_alpha.c libft/preppend_n_space_to_string.c libft/string_end_with.c \
-			 libft/quick_sort_list.c
+			 libft/quick_sort_list.c libft/lst_data_at.c
 
 LIBFT_INCLUDE=libft
 

@@ -6,7 +6,7 @@
 /*   By: aemilien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 18:16:49 by aemilien          #+#    #+#             */
-/*   Updated: 2018/10/27 11:37:16 by aemilien         ###   ########.fr       */
+/*   Updated: 2018/12/15 12:20:52 by aemilien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,5 @@ int				ft_strcmp_alpha(char *s1, char *s2);
 char			*create_string_from_many(const char **many_strings, int size);
 t_list			*quick_sort_list(t_list *list,
 													int (*sort)(void*, void*));
+void			*lst_data_at(t_list *list, size_t n);
 #endif
